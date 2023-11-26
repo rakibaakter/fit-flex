@@ -6,10 +6,10 @@ const MainLayout = () => {
   return (
     <div>
       <Navbar />
-      <div>
+      {/* <div>
         <Outlet />
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
