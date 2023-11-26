@@ -6,7 +6,7 @@ import Routers from "./Routers/Routers.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="min-h-screen bg-slate-900 text-gray-300">
+    <div className="min-h-screen bg-slate-900 text-gray-200 italic tracking-wider  md:tracking-widest">
       <RouterProvider router={Routers} />
     </div>
   </React.StrictMode>
