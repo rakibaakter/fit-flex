@@ -1,0 +1,52 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "title": "Tailored Fitness Plans",
+      "description": "Enjoy workout plans personalized to your fitness level, goals, and preferences. Our trainers curate programs that evolve with you, ensuring every session is effective and engaging.",
+      "icon": "https://i.ibb.co/vZbwfhY/undraw-fitness-stats-sht6.png"
+    },
+    {
+      "id": 2,
+      "title": "Varied Class Selection",
+      "description": "Dive into a world of fitness diversity. Choose from a range of classes including high-intensity workouts, yoga, strength training, and more. Discover the perfect fit for your fitness journey.",
+      "icon": "https://i.ibb.co/L9xV3LC/class.png"
+    },
+    {
+      "id": 3,
+      "title": "Expert Trainer Support",
+      "description": "Benefit from the expertise of our certified trainers. Receive guidance, tips, and motivation throughout your fitness journey. Our trainers are here to support you in achieving your goals.",
+      "icon": "https://i.ibb.co/QpSQRqm/fitness2.png"
+    },
+    {
+      "id": 4,
+      "title": "Track Your Progress",
+      "description": "Monitor your fitness journey with ease. Our intuitive progress tracking feature lets you visualize your achievements, set new goals, and stay motivated every step of the way.",
+      "icon": "https://i.ibb.co/jGP3DHt/fitness3.png"
+    },
+    {
+      "id": 5,
+      "title": "Fit Flex Community",
+      "description": "Join a thriving community of fitness enthusiasts. Connect, share experiences, and celebrate victories together. The Fit Flex community is here to inspire and support your wellness journey.",
+      "icon": "https://i.ibb.co/dpF9rQr/c.png"
+    },
+    {
+      "id": 6,
+      "title": "Schedule Flexibility",
+      "description": "Life is busy, and we get it. Fit Flex offers flexible class schedules, making it easy to find a time that suits you. Your fitness routine adapts to your lifestyle.",
+      "icon": "https://i.ibb.co/hgR6kxZ/t.png"
+    },
+    {
+      "id": 7,
+      "title": "Holistic Wellness",
+      "description": "Achieve comprehensive wellness with nutrition guidance. Our platform provides tips, recipes, and insights to complement your fitness routine and nourish your body.",
+      "icon": "https://i.ibb.co/2yxvc5j/fitness4.png"
+    },
+    {
+      "id": 8,
+      "title": "Instant Feedback",
+      "description": "Receive real-time feedback during your workouts. Our platform gives you insights into your form, performance, and progress, ensuring each session is optimized for your success.",
+      "icon": "https://i.ibb.co/tzQpRCs/s.png"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
+import bannerImg from "../../../../assets/banner.jpg";
 import { Link } from "react-router-dom";
-import PrimaryButton from "../../../Component/PrimaryButton";
-import bannerImg from "../../../assets/banner.jpg";
+import PrimaryButton from "../../../../Component/PrimaryButton";
 
 const Banner = () => {
   return (

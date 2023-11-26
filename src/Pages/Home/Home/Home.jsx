@@ -1,9 +1,11 @@
-import Banner from "../HomeComponents/Banner";
+import Banner from "../HomeComponents/Banner/Banner";
+import Features from "../HomeComponents/Features/Features";
 
 const Home = () => {
   return (
-    <div>
+    <div className="space-y-12">
       <Banner />
+      <Features />
     </div>
   );
 };
