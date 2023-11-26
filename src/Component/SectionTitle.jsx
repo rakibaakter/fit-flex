@@ -2,7 +2,7 @@ import logoIcon from "../assets/logo.png";
 
 const SectionTitle = ({ value }) => {
   return (
-    <div className="text-center py-8">
+    <div className="text-center pt-8 pb-16">
       <div className="flex justify-center items-center">
         <img src={logoIcon} alt="" />
         <div>
