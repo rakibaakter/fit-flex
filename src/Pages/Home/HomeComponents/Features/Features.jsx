@@ -18,7 +18,7 @@ const Features = () => {
   // }, []);
 
   return (
-    <section className="px-4 md:px-12 lg:px-32">
+    <section className="py-10 px-4 md:px-12 lg:px-32">
       <SectionTitle value="Features" />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
         {features.map((feature) => (
