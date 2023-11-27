@@ -14,7 +14,7 @@ const ClientReview = ({ review }) => {
   const { rating, details, name, image } = review;
 
   return (
-    <SwiperSlide className=" py-10 px-10  space-y-4 text-center lg:my-8 ">
+    <SwiperSlide className="px-10  space-y-4 text-center ">
       <div className="bg-slate-900 px-4 py-8 md:mx-20 lg:mx-48">
         <div className="h-12 w-12 md:h-24 md:w-24 rounded-full mx-auto">
           <img
