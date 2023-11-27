@@ -14,21 +14,27 @@ const ClientReview = ({ review }) => {
   const { rating, details, name, image } = review;
 
   return (
-    <SwiperSlide className="py-10 px-10  space-y-4 text-center lg:my-8 ">
-      <div className="h-24 w-24 rounded-full mx-auto">
-        <img src={image} alt="" className="h-24 w-24 rounded-full" />
+    <SwiperSlide className=" py-10 px-10  space-y-4 text-center lg:my-8 ">
+      <div className="bg-slate-900 px-4 py-8 md:mx-20 lg:mx-48">
+        <div className="h-12 w-12 md:h-24 md:w-24 rounded-full mx-auto">
+          <img
+            src={image}
+            alt=""
+            className="h-12 w-12 md:h-24 md:w-24 rounded-full "
+          />
+        </div>
+        <StarRatings
+          rating={rating}
+          starRatedColor="orange"
+          starDimension="24px"
+          starSpacing="2px"
+          name="rating"
+        />
+        <br />
+        <FontAwesomeIcon icon={faQuoteLeft} className="text-3xl md:text-7xl" />
+        <p className="w-full md:w-1/2 mx-auto">{details}</p>
+        <h2 className="text-red-300 uppercase text-xl md:text-3xl">{name}</h2>
       </div>
-      <StarRatings
-        rating={rating}
-        starRatedColor="orange"
-        starDimension="40px"
-        starSpacing="8px"
-        name="rating"
-      />
-      <br />
-      <FontAwesomeIcon icon={faQuoteLeft} className="text-7xl" />
-      <p className="w-1/2 mx-auto">{details}</p>
-      <h2 className="text-red-300 uppercase text-3xl">{name}</h2>
     </SwiperSlide>
   );
 };
