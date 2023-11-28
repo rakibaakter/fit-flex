@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../../Component/Logo";
 import { MdOutlineMenu } from "react-icons/md";
 
@@ -71,7 +71,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end pr-2">
-        <button>get start</button>
+        <Link to="/login">
+          <span>Log In</span>
+        </Link>
       </div>
     </nav>
   );
