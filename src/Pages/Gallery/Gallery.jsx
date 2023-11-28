@@ -26,9 +26,11 @@ const Gallery = () => {
   });
   console.log(data);
 
-  const images = data?.pages.reduce((acc, page) => {
-    return [...acc, ...page.images];
+  const images = data?.pages.reduce((acc, pages) => {
+    return [...acc, pages];
   }, []);
+
+  console.log(images);
 
   return (
     <div>
@@ -45,7 +47,7 @@ const Gallery = () => {
               images.map((image) => {
                 return (
                   <div
-                    className="border-2 p-2 bg-slate-200 rounded"
+                    className="border-2 p-2 bg-slate-600 rounded"
                     key={image._id}
                   >
                     <img src={image.imageUrl} alt="" />
