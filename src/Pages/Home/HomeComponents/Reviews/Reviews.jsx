@@ -26,7 +26,7 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section className="relative py-10 px-4 md:px-12 lg:px-32">
+    <section className="relative  px-4 md:px-12 lg:px-32">
       <SectionTitle value="Happy Clients" />
       <div>
         <Swiper

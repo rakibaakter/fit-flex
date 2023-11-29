@@ -44,7 +44,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="pb-24">
+    <section className="pb-12">
       <div
         className="hero bg-fixed"
         style={{
