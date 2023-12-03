@@ -3,7 +3,7 @@ import ClassInfo from "./ClassInfo";
 
 const ClassCard = ({ classItem }) => {
   const { name, image } = classItem;
-  console.log(classItem);
+  // console.log(classItem);
   const [isShow, setIsShow] = useState(false);
 
   return (
