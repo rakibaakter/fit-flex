@@ -8,7 +8,7 @@ const WeekClass = ({ classes }) => {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednessday",
+    "Wednesday",
     "Thursday",
     "Friday",
   ];
