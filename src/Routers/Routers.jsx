@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Gallery from "../Pages/Gallery/Gallery";
 import Login from "../Pages/Login/Login";
+import Classes from "../Pages/Classes/Classes/Classes";
 
 const Routers = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const Routers = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery />,
+      },
+      {
+        path: "/classes",
+        element: <Classes />,
       },
       {
         path: "/login",
