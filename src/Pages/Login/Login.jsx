@@ -132,14 +132,9 @@ const Login = () => {
                     type="password"
                     placeholder="password"
                     name="password"
-                    className="input input-bordered"
+                    className="input input-bordered text-black"
                     required
                   />
-                  <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </a>
-                  </label>
                 </div>
 
                 <div className="form-control">

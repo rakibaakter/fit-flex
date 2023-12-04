@@ -144,7 +144,7 @@ const SignUp = () => {
                       type="password"
                       placeholder="password"
                       name="password"
-                      className="input input-bordered"
+                      className="input input-bordered text-black"
                       {...register("password", {
                         required: true,
                         minLength: 6,

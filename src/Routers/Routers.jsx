@@ -10,6 +10,7 @@ import Trainers from "../Pages/Trainers/Trainers/Trainers";
 import TrainerDetails from "../Pages/Trainers/TrainerDetails/TrainerDetails";
 import ApplyTrainer from "../Pages/Trainers/ApplyTrainer/ApplyTrainer";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoutes from "./PrivateRoutes";
 
 const Routers = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const Routers = createBrowserRouter([
       },
       {
         path: "/apply-trainer",
-        element: <ApplyTrainer />,
+        element: (
+          <PrivateRoutes>
+            <ApplyTrainer />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/classes",

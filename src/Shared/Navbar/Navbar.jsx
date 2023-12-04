@@ -1,8 +1,42 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../Component/Logo";
 import { MdOutlineMenu } from "react-icons/md";
+import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          title: "Sign Out Successfully",
+          showClass: {
+            popup: `
+                animate__animated
+                animate__fadeInUp
+                animate__faster
+              `,
+          },
+          hideClass: {
+            popup: `
+                animate__animated
+                animate__fadeOutDown
+                animate__faster
+              `,
+          },
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error.message,
+        });
+      });
+  };
+
   const navLinks = (
     <>
       <li>
@@ -71,9 +105,23 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end pr-2">
-        <Link to="/login">
-          <span>Log In</span>
-        </Link>
+        {user ? (
+          <div className="flex items-center gap-2 md:gap-4">
+            <div className="flex flex-col justify-center">
+              <img
+                className="h-8 w-6 md:h-8 md:w-10 rounded-full mx-auto"
+                src={user?.photoURL}
+                alt=""
+              />
+              <span>{user?.displayName}</span>
+            </div>
+            <button onClick={handleLogOut} className="font-normal">
+              Log Out
+            </button>
+          </div>
+        ) : (
+          <NavLink to="/login">Log In</NavLink>
+        )}
       </div>
     </nav>
   );
