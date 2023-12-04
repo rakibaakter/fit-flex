@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const { createUser, updateUser } = useAuth();
@@ -77,6 +78,9 @@ const SignUp = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Fit Flex | Signup</title>
+      </Helmet>
       <div
         className="hero min-h-screen p-32"
         style={{

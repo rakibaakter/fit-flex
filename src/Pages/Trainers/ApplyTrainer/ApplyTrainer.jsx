@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageBanner from "../../../Component/PageBanner";
+import { Helmet } from "react-helmet-async";
 
 const ApplyTrainer = () => {
   const skillsArray = [
@@ -28,6 +29,9 @@ const ApplyTrainer = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Fit Flex | Apply Trainer</title>
+      </Helmet>
       <PageBanner title="Be A Trainer" />
       <div className="bg-slate-900 py-16 w-11/12 md:w-3/4 mx-auto">
         <div className="card shrink-0 w-full  shadow-2xl ">

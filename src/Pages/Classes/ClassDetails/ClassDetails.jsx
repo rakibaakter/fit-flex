@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import SectionTitle from "../../../Component/SectionTitle";
 import PrimaryButton from "../../../Component/PrimaryButton";
+import { Helmet } from "react-helmet-async";
 
 const ClassDetails = () => {
   const { id } = useParams();
@@ -44,6 +45,9 @@ const ClassDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Fit Flex | Class Details</title>
+      </Helmet>
       <img className="md:h-[80vh] w-full" src={image} alt="" />
       <div className="px-4 md:px-12 lg:px-32">
         <SectionTitle value={name} />
@@ -92,7 +96,7 @@ const ClassDetails = () => {
               </div>
             </div>
           </div>
-          <Link to={`/trainer/${trainerId}`}>
+          <Link to={`/trainer-details/${trainerId}`}>
             <PrimaryButton value="Join Now" />
           </Link>
         </div>

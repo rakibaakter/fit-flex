@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn, googleSignIn } = useAuth();
@@ -84,73 +85,78 @@ const Login = () => {
   };
 
   return (
-    <div
-      className="hero min-h-screen p-32"
-      style={{
-        backgroundImage: `url(${bgImg})`,
-      }}
-    >
-      <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
-      <div className="hero-content text-center ">
-        <div className="hero min-h-screen ">
-          <div className="hero-content flex-col lg:flex-row">
-            <div className="text-center lg:text-left">
-              <img src={loginImg} alt="" />
-            </div>
-            <div className="card shrink-0 w-full max-w-md text-white">
-              <h1 className="text-4xl font-bold">Sign In Now!</h1>
-              <button
-                onClick={hangleGoogleSignIn}
-                className="btn-outline bg-transparent text-white border boder-white rounded-lg py-3 mt-12 w-[85%] mx-auto "
-              >
-                <p className="flex justify-center items-center gap-2">
-                  <span>Sign In With Google</span>
-                  <FcGoogle className="text-2xl" />
-                </p>
-              </button>
-              <div className="mt-6">
-                <p>---Or Sign In By Email Password---</p>
+    <div>
+      <Helmet>
+        <title>Fit Flex | Login</title>
+      </Helmet>
+      <div
+        className="hero min-h-screen p-32"
+        style={{
+          backgroundImage: `url(${bgImg})`,
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
+        <div className="hero-content text-center ">
+          <div className="hero min-h-screen ">
+            <div className="hero-content flex-col lg:flex-row">
+              <div className="text-center lg:text-left">
+                <img src={loginImg} alt="" />
               </div>
-              <form onSubmit={handleLogin} className="card-body ">
-                <div className="form-control ">
-                  <label className="label ">
-                    <span className="label-text text-gray-300">Email</span>
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="email"
-                    name="email"
-                    className="input input-bordered"
-                    required
-                  />
+              <div className="card shrink-0 w-full max-w-md text-white">
+                <h1 className="text-4xl font-bold">Sign In Now!</h1>
+                <button
+                  onClick={hangleGoogleSignIn}
+                  className="btn-outline bg-transparent text-white border boder-white rounded-lg py-3 mt-12 w-[85%] mx-auto "
+                >
+                  <p className="flex justify-center items-center gap-2">
+                    <span>Sign In With Google</span>
+                    <FcGoogle className="text-2xl" />
+                  </p>
+                </button>
+                <div className="mt-6">
+                  <p>---Or Sign In By Email Password---</p>
                 </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-gray-300">Password</span>
-                  </label>
-                  <input
-                    type="password"
-                    placeholder="password"
-                    name="password"
-                    className="input input-bordered text-black"
-                    required
-                  />
-                </div>
+                <form onSubmit={handleLogin} className="card-body ">
+                  <div className="form-control ">
+                    <label className="label ">
+                      <span className="label-text text-gray-300">Email</span>
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="email"
+                      name="email"
+                      className="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text text-gray-300">Password</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="password"
+                      name="password"
+                      className="input input-bordered text-black"
+                      required
+                    />
+                  </div>
 
-                <div className="form-control">
-                  <input
-                    type="submit"
-                    value="Log In"
-                    className="btn bg-red-600 text-white border-none"
-                  />
-                </div>
-                <label className="  text-center my-2 text-red-300">
-                  New Here?{" "}
-                  <Link to="/sign-up" className="font-bold">
-                    Create a New Account
-                  </Link>
-                </label>
-              </form>
+                  <div className="form-control">
+                    <input
+                      type="submit"
+                      value="Log In"
+                      className="btn bg-red-600 text-white border-none"
+                    />
+                  </div>
+                  <label className="  text-center my-2 text-red-300">
+                    New Here?{" "}
+                    <Link to="/sign-up" className="font-bold">
+                      Create a New Account
+                    </Link>
+                  </label>
+                </form>
+              </div>
             </div>
           </div>
         </div>

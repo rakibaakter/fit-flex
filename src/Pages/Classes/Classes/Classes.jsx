@@ -3,6 +3,7 @@ import PageBanner from "../../../Component/PageBanner";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import WeekClass from "../ClassComponent/WeekClass/WeekClass";
 import AllClasses from "../ClassComponent/AllClasses/AllClasses";
+import { Helmet } from "react-helmet-async";
 
 const Classes = () => {
   const axiosPublic = useAxiosPublic();
@@ -25,6 +26,9 @@ const Classes = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Fit Flex | Classes</title>
+      </Helmet>
       <PageBanner title="Our Classes" />
       <div className=" px-4 md:px-12 lg:px-32">
         <WeekClass classes={classes} />

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const TrainerDetails = () => {
   const { id } = useParams();
@@ -20,6 +21,9 @@ const TrainerDetails = () => {
 
   return (
     <div className="bg-slate-900 py-32 w-11/12 md:w-3/4 mx-auto">
+      <Helmet>
+        <title>Fit Flex | Trainer Details</title>
+      </Helmet>
       <div className="flex justify-center">
         <img
           className="h-48 w-48 object-cover"

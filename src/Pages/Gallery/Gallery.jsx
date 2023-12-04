@@ -1,6 +1,7 @@
 import PageBanner from "../../Component/PageBanner";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const getImages = async ({ pageParam = 0 }) => {
@@ -34,6 +35,9 @@ const Gallery = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Fit Flex | Gallery</title>
+      </Helmet>
       <PageBanner title="Gallery Grid" />
       <div>
         <InfiniteScroll
