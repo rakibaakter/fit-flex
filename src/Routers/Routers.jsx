@@ -6,6 +6,7 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Login from "../Pages/Login/Login";
 import Classes from "../Pages/Classes/Classes/Classes";
 import ClassDetails from "../Pages/Classes/ClassDetails/ClassDetails";
+import Trainers from "../Pages/Trainers/Trainers/Trainers";
 
 const Routers = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const Routers = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery />,
+      },
+      {
+        path: "/trainers",
+        element: <Trainers />,
       },
       {
         path: "/classes",
