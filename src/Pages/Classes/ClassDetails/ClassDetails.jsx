@@ -11,6 +11,7 @@ const ClassDetails = () => {
   //   console.log(id);
   const axiosPublic = useAxiosPublic();
   const [selectedClass, setSelectedClass] = useState({});
+  const [trainers, setTrainers] = useState([]);
 
   useEffect(() => {
     axiosPublic.get(`/classes/${id}`).then((res) => {
@@ -33,6 +34,17 @@ const ClassDetails = () => {
     price,
     time,
   } = selectedClass;
+
+  useEffect(() => {
+    axiosPublic.get("/trainers").then((res) => {
+      setTrainers(res.data);
+    });
+  }, [axiosPublic]);
+  // console.log(trainers);
+  const selectedTrainer = trainers.find(
+    (trainer) => trainer.trainerId === trainerId
+  );
+  // console.log(selectedTrainer);
 
   //   const { data } = useQuery({
   //     queryKey: ["selectedClass"],
@@ -96,7 +108,7 @@ const ClassDetails = () => {
               </div>
             </div>
           </div>
-          <Link to={`/trainer-details/${trainerId}`}>
+          <Link to={`/trainer-details/${selectedTrainer._id}`}>
             <PrimaryButton value="Join Now" />
           </Link>
         </div>
