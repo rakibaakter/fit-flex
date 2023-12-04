@@ -16,7 +16,7 @@ const FeatureClasses = () => {
 
   return (
     <div className=" px-4 md:px-12 lg:px-32">
-      <SectionTitle value="Feature Classes" />
+      {/* <SectionTitle value="Feature Classes" /> */}
       <AllClasses classes={classes} />
     </div>
   );

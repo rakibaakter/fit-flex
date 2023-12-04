@@ -5,6 +5,7 @@ import Features from "../HomeComponents/Features/Features";
 import Newsletter from "../HomeComponents/Newsletter/Newsletter";
 import Reviews from "../HomeComponents/Reviews/Reviews";
 import FeatureClasses from "../HomeComponents/FeatureClasses/FeatureClasses";
+import Team from "../Team/Team";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <About />
         <Features />
         <FeatureClasses />
+        <Team />
         <Reviews />
         <Newsletter />
       </div>
