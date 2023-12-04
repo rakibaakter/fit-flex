@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import PageBanner from "../../../Component/PageBanner";
 import TrainerCard from "../TrainerComponent/TrainerCard";
+import { Link } from "react-router-dom";
+import PrimaryButton from "../../../Component/PrimaryButton";
 
 const Trainers = () => {
   const axiosPublic = useAxiosPublic();
@@ -16,7 +18,7 @@ const Trainers = () => {
   //   console.log(trainers);
 
   return (
-    <div>
+    <div className="text-center mb-16">
       <PageBanner title="Our Trainers" />
       <div className=" px-4 md:px-12 lg:px-32">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-16 ">
@@ -24,6 +26,9 @@ const Trainers = () => {
             <TrainerCard key={trainer._id} trainer={trainer} />
           ))}
         </div>
+        <Link to="/apply-trainer">
+          <PrimaryButton value="Be A Trainer " />
+        </Link>
       </div>
     </div>
   );

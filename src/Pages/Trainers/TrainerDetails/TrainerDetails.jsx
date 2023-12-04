@@ -16,7 +16,7 @@ const TrainerDetails = () => {
     },
   });
 
-  console.log(trainer);
+  // console.log(trainer);
 
   return (
     <div className="bg-slate-900 py-32 w-11/12 md:w-3/4 mx-auto">

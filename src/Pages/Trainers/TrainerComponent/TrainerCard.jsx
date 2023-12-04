@@ -27,7 +27,7 @@ const TrainerCard = ({ trainer }) => {
       availableDay.push(prop);
     }
   }
-  console.log(availableDay);
+  // console.log(availableDay);
 
   return (
     <div>
