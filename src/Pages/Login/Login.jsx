@@ -111,10 +111,10 @@ const Login = () => {
               <div className="mt-6">
                 <p>---Or Sign In By Email Password---</p>
               </div>
-              <form onSubmit={handleLogin} className="card-body">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Email</span>
+              <form onSubmit={handleLogin} className="card-body ">
+                <div className="form-control ">
+                  <label className="label ">
+                    <span className="label-text text-gray-300">Email</span>
                   </label>
                   <input
                     type="email"
@@ -126,7 +126,7 @@ const Login = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Password</span>
+                    <span className="label-text text-gray-300">Password</span>
                   </label>
                   <input
                     type="password"

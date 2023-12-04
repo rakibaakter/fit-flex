@@ -96,7 +96,7 @@ const SignUp = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">Name</span>
+                      <span className="label-text text-gray-300">Name</span>
                     </label>
                     <input
                       type="text"
@@ -111,7 +111,9 @@ const SignUp = () => {
                   </div>
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">Photo Url (optional)</span>
+                      <span className="label-text text-gray-300">
+                        Photo Url (optional)
+                      </span>
                     </label>
                     <input
                       type="text"
@@ -123,7 +125,7 @@ const SignUp = () => {
                   </div>
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">Email</span>
+                      <span className="label-text text-gray-300">Email</span>
                     </label>
                     <input
                       type="email"
@@ -138,7 +140,7 @@ const SignUp = () => {
                   </div>
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text">Password</span>
+                      <span className="label-text text-gray-300">Password</span>
                     </label>
                     <input
                       type="password"

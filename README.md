@@ -1,8 +1,17 @@
-# React + Vite
+# Project Name: Fit Flex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Link
 
-Currently, two official plugins are available:
+https://fitness-tracker-90298.web.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+1. **Feature 1: Implemented react-scrollbar**
+
+2. **Feature 2: Has Newsletter feature**
+
+3. **Feature 3: Have login and register page toggle option**
+
+4. **Feature 4: In homepage feature section hover affect added**
+
+5. **Feature 5: Implemented and customized parallax slider**

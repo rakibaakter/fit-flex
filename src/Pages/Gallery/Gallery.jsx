@@ -5,7 +5,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 const getImages = async ({ pageParam = 0 }) => {
   const res = await fetch(
-    `http://localhost:5000/gallery?limit=12&offset=${pageParam}`
+    `https://fitness-tracker-server-lac.vercel.app/gallery?limit=12&offset=${pageParam}`
   );
   const data = await res.json();
   console.log(data);
