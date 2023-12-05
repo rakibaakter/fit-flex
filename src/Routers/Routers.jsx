@@ -12,6 +12,7 @@ import ApplyTrainer from "../Pages/Trainers/ApplyTrainer/ApplyTrainer";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
 import DashboardLayout from "../Dashboard/DashboardLayout/DashboardLayout";
+import AllSubscriber from "../Dashboard/AdminAccess/Subscriber/AllSubscriber";
 
 const Routers = createBrowserRouter([
   {
@@ -69,7 +70,12 @@ const Routers = createBrowserRouter([
         <DashboardLayout />
       </PrivateRoutes>
     ),
-    children: [],
+    children: [
+      {
+        path: "all-subscribers",
+        element: <AllSubscriber />,
+      },
+    ],
   },
 ]);
 
