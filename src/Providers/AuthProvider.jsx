@@ -16,6 +16,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const axiosPublic = useAxiosPublic();
 
@@ -43,8 +44,11 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      // console.log(currentUser);
+      console.log(currentUser);
       setUser(currentUser);
+      if (currentUser.email === "admin@gmail.com") {
+        setIsAdmin(true);
+      }
 
       setLoading(false);
     });
@@ -63,6 +67,7 @@ const AuthProvider = ({ children }) => {
 
   const authInfo = {
     user,
+    isAdmin,
     loading,
     createUser,
     signIn,

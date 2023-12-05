@@ -1,8 +1,9 @@
 import { MdDashboard } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 
 const DashboardNavbar = () => {
-  const isAdmin = true;
+  const { isAdmin } = useAuth();
 
   const mainNavItems = (
     <>
