@@ -11,6 +11,7 @@ import TrainerDetails from "../Pages/Trainers/TrainerDetails/TrainerDetails";
 import ApplyTrainer from "../Pages/Trainers/ApplyTrainer/ApplyTrainer";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
+import DashboardLayout from "../Dashboard/DashboardLayout/DashboardLayout";
 
 const Routers = createBrowserRouter([
   {
@@ -60,6 +61,15 @@ const Routers = createBrowserRouter([
         element: <SignUp />,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoutes>
+        <DashboardLayout />
+      </PrivateRoutes>
+    ),
+    children: [],
   },
 ]);
 
