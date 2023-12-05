@@ -13,6 +13,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
 import DashboardLayout from "../Dashboard/DashboardLayout/DashboardLayout";
 import AllSubscriber from "../Dashboard/AdminAccess/Subscriber/AllSubscriber";
+import AdminRoutes from "./AdminRoutes";
 
 const Routers = createBrowserRouter([
   {
@@ -73,7 +74,11 @@ const Routers = createBrowserRouter([
     children: [
       {
         path: "all-subscribers",
-        element: <AllSubscriber />,
+        element: (
+          <AdminRoutes>
+            <AllSubscriber />
+          </AdminRoutes>
+        ),
       },
     ],
   },

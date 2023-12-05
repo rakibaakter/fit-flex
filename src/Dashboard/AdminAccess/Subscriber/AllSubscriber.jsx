@@ -12,7 +12,7 @@ const AllSubscriber = () => {
       return result.data;
     },
   });
-  console.log(subscribers);
+  // console.log(subscribers);
 
   return (
     <div>
