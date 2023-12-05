@@ -18,6 +18,9 @@ import AllTrainers from "../Dashboard/AdminAccess/AllTrainers/AllTrainers";
 import AppliedTrainers from "../Dashboard/AdminAccess/AppiedTrainers/AppliedTrainers";
 import Balance from "../Dashboard/AdminAccess/Balance/Balance";
 import Community from "../Pages/Community/Community";
+import ActivityLog from "../Dashboard/UserAccess/Activity/ActivityLog";
+import Profile from "../Dashboard/UserAccess/Profile/Profile";
+import RecommendedClass from "../Dashboard/UserAccess/RecommendedClass/RecommendedClass";
 
 const Routers = createBrowserRouter([
   {
@@ -111,6 +114,18 @@ const Routers = createBrowserRouter([
             <Balance />
           </AdminRoutes>
         ),
+      },
+      {
+        path: "activity-log",
+        element: <ActivityLog />,
+      },
+      {
+        path: "profile-setting",
+        element: <Profile />,
+      },
+      {
+        path: "recommended-classes",
+        element: <RecommendedClass />,
       },
     ],
   },
