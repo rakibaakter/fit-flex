@@ -1,8 +1,14 @@
 import { useState } from "react";
 import PageBanner from "../../../Component/PageBanner";
 import { Helmet } from "react-helmet-async";
+import useAuth from "../../../Hooks/useAuth";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const ApplyTrainer = () => {
+  const { user } = useAuth();
+  const axiosPublic = useAxiosPublic();
+
   const skillsArray = [
     "Yoga",
     "Pilates",
@@ -27,6 +33,41 @@ const ApplyTrainer = () => {
     }
   };
 
+  const handleApplyTrainer = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const trainerName = form.name.value;
+    const email = form.email.value;
+    const age = form.age.value;
+    const profileImage = form.profileImage.value;
+    const skill = selectedSkills;
+    const availableTimePerWeek = form.availableTimePerWeek.value;
+    const availableTimePerDay = form.availableTimePerDay.value;
+
+    const trainer = {
+      trainerName,
+      email,
+      age,
+      profileImage,
+      skill,
+      availableTimePerWeek,
+      availableTimePerDay,
+    };
+    // console.log(trainer);
+    axiosPublic.post("/trainers", trainer).then((res) => {
+      console.log(res);
+      if (res.data.insertedId) {
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Your application has been submitted",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    });
+  };
+
   return (
     <div>
       <Helmet>
@@ -34,8 +75,8 @@ const ApplyTrainer = () => {
       </Helmet>
       <PageBanner title="Be A Trainer" />
       <div className="bg-slate-900 py-16 w-11/12 md:w-3/4 mx-auto">
-        <div className="card shrink-0 w-full  shadow-2xl ">
-          <form className="card-body ">
+        <div className="card shrink-0 w-full  shadow-2xl text-black ">
+          <form onSubmit={handleApplyTrainer} className="card-body ">
             <div className="form-control ">
               <label className="label">
                 <span className="label-text text-gray-300">Full Name</span>
@@ -45,7 +86,6 @@ const ApplyTrainer = () => {
                 placeholder="name"
                 name="name"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control ">
@@ -55,9 +95,10 @@ const ApplyTrainer = () => {
               <input
                 type="email"
                 placeholder="email"
+                defaultValue={user.email}
+                disabled
                 name="email"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control ">
@@ -69,7 +110,6 @@ const ApplyTrainer = () => {
                 placeholder="age"
                 name="age"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control ">
@@ -81,7 +121,6 @@ const ApplyTrainer = () => {
                 placeholder="Profile Url"
                 name="profileImage"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control ">
@@ -112,7 +151,6 @@ const ApplyTrainer = () => {
                   defaultValue={selectedSkills.join(", ")}
                   name="skills"
                   className="input input-bordered w-full "
-                  required
                 />
               </div>
             </div>
@@ -127,7 +165,6 @@ const ApplyTrainer = () => {
                 placeholder="Available Time Per Week"
                 name="availableTimePerWeek"
                 className="input input-bordered"
-                required
               />
             </div>
             <div className="form-control ">
@@ -141,7 +178,6 @@ const ApplyTrainer = () => {
                 placeholder="Available Time Per Day"
                 name="availableTimePerDay"
                 className="input input-bordered"
-                required
               />
             </div>
 
