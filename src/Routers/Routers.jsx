@@ -17,6 +17,7 @@ import AdminRoutes from "./AdminRoutes";
 import AllTrainers from "../Dashboard/AdminAccess/AllTrainers/AllTrainers";
 import AppliedTrainers from "../Dashboard/AdminAccess/AppiedTrainers/AppliedTrainers";
 import Balance from "../Dashboard/AdminAccess/Balance/Balance";
+import Community from "../Pages/Community/Community";
 
 const Routers = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const Routers = createBrowserRouter([
       {
         path: "//class-details/:id",
         element: <ClassDetails />,
+      },
+      {
+        path: "/community",
+        element: <Community />,
       },
       {
         path: "/login",
