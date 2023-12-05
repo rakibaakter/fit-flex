@@ -79,6 +79,14 @@ const Navbar = () => {
           Community
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => (isActive ? "text-red-500" : "")}
+        >
+          Dashboard
+        </NavLink>
+      </li>
     </>
   );
   return (

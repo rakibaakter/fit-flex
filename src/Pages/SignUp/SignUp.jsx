@@ -20,10 +20,10 @@ const SignUp = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     createUser(data.email, data.password)
       .then((userCredential) => {
-        console.log(userCredential);
+        // console.log(userCredential);
         updateUser(data.name, data.photoUrl)
           .then((res) => {
             const newUser = {
@@ -107,7 +107,7 @@ const SignUp = () => {
                       placeholder="name"
                       name="name"
                       {...register("name", { required: true })}
-                      className="input input-bordered"
+                      className="input input-bordered text-black"
                     />
                     {errors.name?.type === "required" && (
                       <p className="text-red-600"> Name is required</p>
@@ -124,7 +124,7 @@ const SignUp = () => {
                       placeholder="photo url"
                       name="photoUrl"
                       {...register("photoUrl")}
-                      className="input input-bordered"
+                      className="input input-bordered text-black"
                     />
                   </div>
                   <div className="form-control">
@@ -135,7 +135,7 @@ const SignUp = () => {
                       type="email"
                       placeholder="email"
                       name="email"
-                      className="input input-bordered"
+                      className="input input-bordered text-black"
                       {...register("email", { required: true })}
                     />
                     {errors.email?.type === "required" && (
@@ -150,7 +150,7 @@ const SignUp = () => {
                       type="password"
                       placeholder="password"
                       name="password"
-                      className="input input-bordered text-black"
+                      className="input input-bordered text-black "
                       {...register("password", {
                         required: true,
                         minLength: 6,

@@ -125,7 +125,7 @@ const Login = () => {
                       type="email"
                       placeholder="email"
                       name="email"
-                      className="input input-bordered"
+                      className="input input-bordered text-black"
                       required
                     />
                   </div>
