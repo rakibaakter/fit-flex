@@ -14,6 +14,9 @@ import PrivateRoutes from "./PrivateRoutes";
 import DashboardLayout from "../Dashboard/DashboardLayout/DashboardLayout";
 import AllSubscriber from "../Dashboard/AdminAccess/Subscriber/AllSubscriber";
 import AdminRoutes from "./AdminRoutes";
+import AllTrainers from "../Dashboard/AdminAccess/AllTrainers/AllTrainers";
+import AppliedTrainers from "../Dashboard/AdminAccess/AppiedTrainers/AppliedTrainers";
+import Balance from "../Dashboard/AdminAccess/Balance/Balance";
 
 const Routers = createBrowserRouter([
   {
@@ -77,6 +80,30 @@ const Routers = createBrowserRouter([
         element: (
           <AdminRoutes>
             <AllSubscriber />
+          </AdminRoutes>
+        ),
+      },
+      {
+        path: "all-trainers",
+        element: (
+          <AdminRoutes>
+            <AllTrainers />
+          </AdminRoutes>
+        ),
+      },
+      {
+        path: "applied-trainers",
+        element: (
+          <AdminRoutes>
+            <AppliedTrainers />
+          </AdminRoutes>
+        ),
+      },
+      {
+        path: "balance",
+        element: (
+          <AdminRoutes>
+            <Balance />
           </AdminRoutes>
         ),
       },
